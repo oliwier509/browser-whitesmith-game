@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whitesmith</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/textures/icon.png">
+</head>
+<body>
+    <div id="game">
+        <div id="anvildiv">
+            <div id="workshop">
+                <h1 style="text-allign: center">KUŹNIA</h1>
+                <div class="innerworkshop" id="bar"><img src="./assets/textures/bar.png" style="width:100%; height:100%;"></div>
+                <br>
+                <div class="innerworkshop" id="hammercontainer"><img src="./assets/textures/mlotek.png" style="width:20%; height:20%;" id="hammer"></div>
+                <br>
+                <div class="innerworkshop" id="kowadło">
+                    <img src="" id="overlay">
+                    <img src="./assets/textures/kowadlo.png" style="width:100%; height:100%;" onclick="anvil()" class="clickable">
+                </div>
+                <div class="innerworkshop">
+                    <select id="list">
+                        <option value="Miecz">Miecz</option>
+                        <option value="Topór">Topór</option>
+                        <option value="Glewia">Glewia</option>
+                        <option value="Cep bojowy">Cep bojowy</option>
+                        <option value="Młot wojenny">Młot wojenny</option>
+                        <option value="Włócznia">Włócznia</option>
+                        <option value="Łuk">Łuk</option>
+                        <option value="Zbroja skórzana">Zbroja skórzana</option>
+                        <option value="Zbroja łuskowa">Zbroja łuskowa</option>
+                        <option value="Zbroja szynowa">Zbroja szynowa</option>
+                    </select>
+                </div>
+            </div>
+            <div id="inventory">
+                <div class="item"><img id="1" locked="true" zbroja="false" src="./assets/textures/locked.png" onclick=moveitem(this.id) class="clickable itemstyle"></div>
+                <div class="item"><img id="2" locked="true" zbroja="false" src="./assets/textures/locked.png" onclick=moveitem(this.id) class="clickable itemstyle"></div>
+                <div class="item"><img id="3" locked="true" zbroja="false" src="./assets/textures/locked.png" onclick=moveitem(this.id) class="clickable itemstyle"></div>
+                <div class="item"><img id="4" locked="true" zbroja="false" src="./assets/textures/locked.png" onclick=moveitem(this.id) class="clickable itemstyle"></div>
+                <div class="item"><img id="5" locked="true" zbroja="false" src="./assets/textures/locked.png" onclick=moveitem(this.id) class="clickable itemstyle"></div>
+                <div class="item"><img id="6" locked="true" zbroja="false" src="./assets/textures/locked.png" onclick=moveitem(this.id) class="clickable itemstyle"></div>
+            </div>
+        </div>
+        <div id="menu">
+            <div id="combatdiv">
+                <p id="history"><br><br><br><br><br></p>
+                <div id="enemyholder">
+                    <img id="enemy" src="./assets/textures/blank.png">
+                </div>
+            </div>
+            <div id="menudiv">
+                <div id="tool1" class="menu">
+                    <img src="" id="tool1itemoverlay" nazwa="">
+                    <img id="tool1item" src="./assets/textures/poduszka.png" class="small">
+                </div>
+                <div id="roller" class="menu">
+                    <img id="d20" src="./assets/textures/fight.png" onclick="roll()" class="small clickable">
+                </div>
+                <div id="tool2" class="menu">
+                    <img src="" id="tool2itemoverlay" nazwa="">
+                    <img id="tool2item" src="./assets/textures/poduszka.png" class="small">
+                </div>
+            </div>
+        </div>
+        <div id="logdiv">
+            <h1>LOG:</h1>
+            <p id="log"></p>
+        </div>
+    </div>
+    <br>
+    <footer>
+        <button onClick="window.location.reload();">RESTART</button>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
